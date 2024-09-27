@@ -1,0 +1,16 @@
+GET http://localhost:3000/api/users
+Content-Type: application/json
+
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name" : "user_test",
+  "username" : "user_test",
+  "password" : "user_test"
+}
+
+###
+DELETE http://localhost:3000/api/users/66ebe4b12c9fbd7dbcd23643
+Content-Type: application/json

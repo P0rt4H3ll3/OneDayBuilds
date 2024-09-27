@@ -1,0 +1,144 @@
+.wrapper {
+  padding: 20px;
+}
+
+.gridList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 columns */
+  gap: 20px; /* spacing between grid items */
+  list-style-type: none;
+}
+
+.taskItem {
+  grid-column: 1 / span;
+  display: grid;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto; /* separate rows for text, status, and buttons */
+  height: 220px;
+  width: 220px;
+
+  align-self: center; /* Vertically center */
+  justify-self: center; /* Horizontally center */
+}
+
+.taskItem:nth-child(1) {
+  grid-column: 2;
+}
+
+.taskText {
+  grid-column: 1 / span 2;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Nothing You Could Do', cursive; /* Ensure font family matches exactly */
+  font-weight: 400; /* This is the regular weight */
+  font-style: normal; /* Normal style */
+  overflow: auto;
+}
+
+.taskStatus {
+  grid-row: inherit;
+  grid-column: 1;
+  align-content: end;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Nothing You Could Do', cursive; /* Ensure font family matches exactly */
+  font-size: 1.5rem;
+  font-weight: 400; /* This is the regular weight */
+  font-style: normal; /* Normal style */
+}
+
+.taskActions {
+  grid-column: 2;
+  grid-row: inherit;
+  align-content: end;
+  text-align: right;
+  font-family: 'Nothing You Could Do', cursive; /* Ensure font family matches exactly */
+  font-weight: 400; /* This is the regular weight */
+  font-style: normal; /* Normal style */
+}
+/* -----------------------------------------------icons-------------------------------------------------- */
+.icons {
+  font-size: 40px;
+  padding: 8px 12px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.icons:hover {
+  background-color: #9d9d9d;
+  cursor: pointer;
+}
+/* -----------------------------------------------responsive design-------------------------------------------------- */
+@media (max-width: 1536px) {
+  .gridList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1280px) {
+  .gridList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .taskItem {
+    height: 190px;
+    width: 190px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gridList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .taskItem {
+    height: 190px;
+    width: 190px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .taskItem {
+    height: 145px;
+    width: 145px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gridList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .taskItem {
+    height: 180px;
+    width: 180px;
+  }
+}
+
+@media (max-width: 375px) {
+  .gridList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .taskItem {
+    height: 120px;
+    width: 120px;
+  }
+  .taskText {
+    font-size: 1rem;
+  }
+
+  .taskStatus {
+    font-size: 1rem;
+  }
+
+  .icons {
+    font-size: 25px;
+  }
+}

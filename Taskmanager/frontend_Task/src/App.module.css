@@ -1,0 +1,227 @@
+/* YourStyles.module.css */
+body {
+  /* Background image settings */
+  background-image: url('../public/kork.jpg'); /* Path to your background image */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the background image */
+
+  margin: 0 auto; /* Remove default margin from the body */
+  height: 100vh; /* Make sure the body takes up the full viewport height */
+}
+
+.appLayout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr; /* Header and main content area */
+  gap: 20px; /* Spacing between items */
+  /* margin: 20px; 
+  padding: 20px;  */
+  background-color: transparent; /* Optional: Background color */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.appName {
+  grid-column: 1; /* Content in the first column */
+  grid-row: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-weight: 900;
+  font-size: 3.5rem;
+  margin: 0;
+  color: #2e01ac;
+}
+.author {
+  grid-column: 3; /* Content in the first column */
+  grid-row: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin: 0;
+  color: #2e01ac;
+}
+
+.navBar {
+  position: relative;
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: space-around;
+
+  flex-direction: row; /* Align items in a row */
+  gap: 10px; /* Space between links */
+  padding: 15px; /* Inner padding */
+  grid-column: 2; /* Content in the first column */
+  grid-row: 1;
+}
+
+.navBar a {
+  width: 150px; /* Adjust width of each nav link */
+  height: 150px; /* Adjust height */
+  display: block;
+  align-content: center;
+  font-size: 2rem;
+  color: #2e01ac;
+  text-decoration: none; /* Remove underline from links */
+  text-align: center; /* Center text inside link */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  padding: 15px; /* Inner padding for text */
+  background: linear-gradient(
+    to bottom,
+    #fdd835 60%,
+    #fff59d 100%
+  ); /* Gradient background */
+  box-shadow: 1px 2px 1px -1px #434242; /* Shadow effect for depth */
+  transform: rotate(-3deg); /* Slight rotation for post-it note look */
+  transition: background 200ms ease-in-out;
+  transform: 150ms ease-in-out; /* Smooth hover transitions */
+
+  position: relative; /* For child element positioning */
+  transform-style: preserve-3d;
+}
+.navBar a::after {
+  content: '';
+  bottom: 0px;
+  right: 0px;
+  width: 95%; /* Full width of the link */
+  height: 20%; /* Adjust height */
+  box-shadow: 0 15px 10px #434242;
+  transform: rotate(4deg);
+  transition: all 150ms ease-in-out; /* Smooth shadow transition */
+
+  position: absolute;
+  transform: translateZ(-1px);
+}
+
+/* Hover effect on the link */
+.navBar a:hover {
+  background: linear-gradient(
+    to bottom,
+    #fdd835 100%,
+    #fff59d 0%
+  ); /* Change background on hover */
+}
+
+/* Hover effect on the pseudo-element shadow */
+.navBar a:hover::after {
+  bottom: 20px;
+  right: 0px;
+}
+
+/* -----------------------------------------------Content like Home or Login or Profile------------------------------ */
+
+.content {
+  grid-column: 1 / span 3; /* Content in the first column */
+  grid-row: 2; /* Content in the second row */
+}
+
+/* -------------------------------------------------TaskView -----------------------------------------------------------*/
+/* -----------------------------------------------responsive design-------------------------------------------------- */
+
+/* 2xl */
+@media (max-width: 1536px) {
+  .appName {
+    font-size: 3rem; /* Adjust font size */
+  }
+
+  .author {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+}
+
+/* Breakpoint for xl screens (1280px and below) */
+@media (max-width: 1280px) {
+  .appLayout {
+    grid-template-columns: 1fr 1fr; /* Reduce to 2 columns */
+  }
+  .appName {
+    font-size: 2rem; /* Adjust font size */
+  }
+
+  .author {
+    display: none; /* Move author into second column */
+  }
+}
+
+/* Breakpoint for large screens (1024px and below) */
+@media (max-width: 1024px) {
+  .appLayout {
+    grid-template-columns: 1fr; /* Stack elements in one column */
+    grid-template-rows: auto auto 1fr; /* Adjust rows for the new layout */
+  }
+
+  .appName {
+    grid-column: 1; /* Take up full width */
+    grid-row: 1;
+    font-size: 3rem; /* Adjust font size */
+  }
+
+  .navBar {
+    grid-column: 1;
+    grid-row: 2; /* Move navBar to second row */
+    justify-content: space-evenly;
+  }
+
+  .content {
+    grid-row: 3;
+  }
+}
+
+/* Breakpoint for medium screens (768px and below) */
+@media (max-width: 768px) {
+  .appLayout {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 10px; /* Reduce spacing between items */
+  }
+
+  .appName {
+    display: none;
+  }
+  .navBar {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .navBar a {
+    width: 100px; /* Adjust size of nav items */
+    height: 100px;
+  }
+}
+
+/* Breakpoint for small screens (640px and below) */
+@media (max-width: 640px) {
+  .appName,
+  .author,
+  .navBar {
+    font-size: 1.5rem; /* Smaller font for small screens */
+    padding: 8px;
+  }
+
+  .navBar a {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Breakpoint for extra small screens (475px and below) */
+@media (max-width: 375px) {
+  .appName,
+  .author,
+  .navBar {
+    font-size: 0.5rem; /* Even smaller font for very small screens */
+    padding: 5px;
+  }
+
+  .navBar a {
+    font-size: 1.3rem;
+    width: 50px;
+    height: 50px;
+  }
+}

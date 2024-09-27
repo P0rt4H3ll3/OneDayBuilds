@@ -1,0 +1,17 @@
+GET http://localhost:3000/api/holidays/66f5574691c57f83c8594267/comments/
+
+###
+DELETE http://localhost:3000/api/holidays/66f5574691c57f83c8594267/comments/66f557d8e6fdf5a9806d030b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJpZCI6IjY2ZjUzMjc2YzZjNTYyNDBiYzY1MzIwZiIsImlhdCI6MTcyNzM1MTM1MH0.cIb0qPoh2JpcTeXGn2fovPPIRJMEAMGavv_baJIn9Ro
+
+
+###
+POST http://localhost:3000/api/holidays/66f5735acac6413f0ed9c0ec/comments
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJpZCI6IjY2ZjU3MjkyZTAwMjk3NmU1Mjg2NTM4NyIsImlhdCI6MTcyNzM2MTY5Nn0.oiHlmSQBMf81n9LNjNBK3vQgwFfcmMJpdH1iBtdu8U4
+
+{
+  "content": "this will be my next to"
+
+}

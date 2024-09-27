@@ -1,0 +1,20 @@
+.addTask {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 columns */
+  gap: 20px; /* spacing between grid items */
+  list-style-type: none;
+}
+
+.icons {
+  font-size: 100px;
+  padding: 8px 12px;
+  border: none;
+  color: rgba(135, 133, 133, 0.544);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.icons:hover {
+  color: rgba(128, 0, 128, 0.6);
+  cursor: pointer;
+}

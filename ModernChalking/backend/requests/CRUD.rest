@@ -1,0 +1,16 @@
+# CRUD create(POST) Read(GET) Update and Delete
+GET http://localhost:3000/api/comments 
+Content-Type: application/json
+### 
+
+DELETE http://localhost:3000/api/comments/66eab231c549c29257a86beb
+Content-Type: application/json
+###
+POST http://localhost:3000/api/comments
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJpZCI6IjY2ZWFkNzY2MTkwMTRjMTBjNTc4OWQ3MSIsImlhdCI6MTcyNjc0NzgwOH0.sWE-buB9Gesvx4YKIwu8FuMWTwC7x-QBWuaI8BKo8ug
+
+{ 
+  "content": "another comment with user?",
+  "likes": 0
+}

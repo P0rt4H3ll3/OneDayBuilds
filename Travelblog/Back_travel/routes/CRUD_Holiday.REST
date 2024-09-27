@@ -1,0 +1,33 @@
+GET http://localhost:3000/api/holidays/
+
+###
+GET http://localhost:3000/api/holidays/66f5573491c57f83c8594261
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:3000/api/holidays/66f572b9e002976e5286538b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJpZCI6IjY2ZjU3MjkyZTAwMjk3NmU1Mjg2NTM4NyIsImlhdCI6MTcyNzM2MTY5Nn0.oiHlmSQBMf81n9LNjNBK3vQgwFfcmMJpdH1iBtdu8U4
+###
+POST http://localhost:3000/api/holidays/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJpZCI6IjY2ZjU3MjkyZTAwMjk3NmU1Mjg2NTM4NyIsImlhdCI6MTcyNzM2MTY5Nn0.oiHlmSQBMf81n9LNjNBK3vQgwFfcmMJpdH1iBtdu8U4
+
+{
+
+  "title": "trip to myself",
+  "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ",
+  "country": "sweden",
+  "category": "relex",
+  "duration": 2,
+  "price": 1
+}
+
+
+
+
+
+###
+
+DELETE http://localhost:3000/api/holidays/all/really
